@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Try the mobile casino Mr Bit, where you can play slot machines directly from your phone on Android or iOS. Sign up for the mobile version of the online casino and start winning!"
+    />
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
+    <title>Mr Bit Casino — Play Online Slots & Table Games for Cryptocurrency</title>
+    <style type="text/css">
+      *,
+      ::after,
+      ::before {
+        box-sizing: border-box;
+      }
+      body {
+        padding: 0;
+        margin: 0;
+        background-color: #071432;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+          'Helvetica Neue', sans-serif;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.5;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      ul {
+        padding: 0;
+        margin: 0;
+      }
+      ul > li {
+        list-style: none;
+      }
+      p {
+        margin: 0;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        margin: 0;
+      }
+      h1 {
+        font-size: 2.4375em;
+        text-align: center;
+        border-bottom: 3px solid #00eaea;
+        padding-bottom: 15px;
+        margin-bottom: 25px;
+      }
+      .container {
+        max-width: 1190px;
+        margin: 0 auto;
+        padding: 0 45px;
+      }
+      .header {
+        box-shadow: inset 0 -1px 0 0 #404040;
+      }
+      .header__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 15px;
+      }
+      .menu__list {
+        display: flex;
+      }
+      .menu__item + .menu__item {
+        margin-left: 30px;
+      }
+      .menu__link {
+        font-size: 0.8em;
+        font-weight: 800;
+        text-transform: uppercase;
+        opacity: 0.8;
+        transition: all 0.3s;
+        position: relative;
+      }
+      .menu__link::after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+        width: 40%;
+        height: 2px;
+        transform: scaleX(0);
+        transform-origin: center center;
+        transition: all 0.2s;
+        background-color: #fff;
+      }
+      .menu__link:hover {
+        opacity: 1;
+      }
+      .menu__link:hover::after {
+        transform: scaleX(1);
+      }
+      .btn__link {
+        display: inline-block;
+        background: linear-gradient(90deg, #ec0766, #743090) !important;
+        padding: 1rem 2rem;
+        border-radius: 10px;
+        font-size: 0.875rem;
+        line-height: 1.5;
+        transition: all 0.3s ease;
+      }
+      .btn__link:hover {
+        opacity: 0.8;
+        transform: translateY(-3px) translateZ(0);
+        box-shadow: 0 15px 35px -16px rgba(0, 0, 0, 0.9);
+      }
+      .content__inner {
+        padding-top: 30px;
+      }
+      .footer {
+        padding: 50px 0;
+        background-color: #001b47;
+      }
+      .footer__text {
+        font-size: 14px;
+      }
+      .scroll-top-btn {
+        width: 60px;
+        height: 50px;
+        position: fixed;
+        bottom: 40px;
+        right: 10px;
+        border: none;
+        background: #fff;
+        box-shadow: 0 3px 30px -5px rgba(0, 0, 0, 0.3);
+        outline: 0;
+        opacity: 0.6;
+        cursor: pointer;
+        z-index: 500;
+        border-radius: 4px;
+        transition: all 0.3s;
+      }
+      .hidden {
+        visibility: hidden;
+        opacity: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <nav class="menu">
+            <ul class="menu__list">
+              <li class="menu__item"><a class="menu__link" href="#">BONUS</a></li>
+              <li class="menu__item"><a class="menu__link" href="#">MOBILE CASINO</a></li>
+            </ul>
+          </nav>
+          <img class="logo__img" src="images/logo.png" alt="logo" width="120" height="61" />
+          <div class="btn-box">
+            <a class="btn__link" href="go">Mr.Bit Casino</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="content">
+      <div class="container">
+        <div class="content__inner">
+          <h1>Mr Bit Mobile Casino</h1>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <p class="footer__text">© 2023 Mr Bit Casino</p>
+        </div>
+      </div>
+    </footer>
+    <button class="scroll-top-btn hidden"></button>
+    <script>
+      const d = document
+      const w = window
+
+      d.addEventListener('DOMContentLoaded', e => {
+        scrollToTop('.scroll-top-btn')
+      })
+
+      function scrollToTop(btnScroll) {
+        const $scrollBtn = d.querySelector(btnScroll)
+
+        d.addEventListener('scroll', e => {
+          let scrollTop = w.pageYOffset || d.documentElement.scrollTop
+
+          if (scrollTop > 100) {
+            $scrollBtn.classList.remove('hidden')
+          } else {
+            $scrollBtn.classList.add('hidden')
+          }
+        })
+        d.addEventListener('click', e => {
+          if (e.target.matches(btnScroll)) {
+            w.scrollTo({
+              behavior: 'smooth',
+              top: 0,
+            })
+          }
+        })
+      }
+    </script>
+  </body>
+</html>

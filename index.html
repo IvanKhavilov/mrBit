@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Play Mr Bit Casino! Sign up on the website and get up to €500 deposit bonus + 50 free spins on top slot machines. Mobile Casino."
+    />
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
+    <title>Mr Bit Casino — Play Online Slots & Table Games for Cryptocurrency</title>
+    <style type="text/css">
+      *,
+      ::after,
+      ::before {
+        box-sizing: border-box;
+      }
+      body {
+        padding: 0;
+        margin: 0;
+        background-color: #071432;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+          'Helvetica Neue', sans-serif;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.5;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      ul {
+        padding: 0;
+        margin: 0;
+      }
+      ul > li {
+        list-style: none;
+      }
+      p {
+        margin: 0;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        margin: 0;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+      p > img {
+        display: block;
+        margin: 0 auto;
+      }
+      .content__inner h1 {
+        font-size: 2.4375em;
+        text-align: center;
+        border-bottom: 3px solid #00eaea;
+        padding-bottom: 15px;
+        margin-bottom: 25px;
+      }
+      .content__inner h2 {
+        font-size: 1.9375em;
+        margin-bottom: 0.77419355em;
+        text-align: center;
+        border-bottom: 3px solid #00eaea;
+        padding-bottom: 15px;
+      }
+      .content__inner p {
+        margin-bottom: 1.7em;
+      }
+      .content__inner ul {
+        padding: 0;
+        margin-left: 25px;
+        max-width: 100%;
+        margin-top: 1.5em;
+        margin-bottom: 2em;
+      }
+      .content__inner ul > li {
+        position: relative;
+        padding-left: 2em;
+      }
+      .content__inner ul > li::before {
+        content: '';
+        position: absolute;
+        top: 0.5em;
+        left: 0;
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border: 2px solid #00eaea;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+      }
+      .container {
+        max-width: 1190px;
+        margin: 0 auto;
+        padding: 0 45px;
+      }
+      .header {
+        box-shadow: inset 0 -1px 0 0 #404040;
+      }
+      .header__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 15px;
+      }
+      .menu__list {
+        display: flex;
+      }
+      .menu__item + .menu__item {
+        margin-left: 30px;
+      }
+      .menu__link {
+        font-size: 0.8em;
+        font-weight: 800;
+        text-transform: uppercase;
+        opacity: 0.8;
+        transition: all 0.3s;
+        position: relative;
+      }
+      .menu__link::after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+        width: 40%;
+        height: 2px;
+        transform: scaleX(0);
+        transform-origin: center center;
+        transition: all 0.2s;
+        background-color: #fff;
+      }
+      .menu__link:hover {
+        opacity: 1;
+      }
+      .menu__link:hover::after {
+        transform: scaleX(1);
+      }
+      .btn-box {
+        text-align: center;
+      }
+      .btn__link {
+        display: inline-block;
+        background: linear-gradient(90deg, #ec0766, #743090) !important;
+        padding: 1rem 2rem;
+        border-radius: 10px;
+        font-size: 1.25rem;
+        line-height: 1.5;
+        transition: all 0.3s ease;
+      }
+      .btn__link--small {
+        font-size: 0.875rem;
+      }
+      .btn__link:hover {
+        opacity: 0.8;
+        transform: translateY(-3px) translateZ(0);
+        box-shadow: 0 15px 35px -16px rgba(0, 0, 0, 0.9);
+      }
+      .content__inner {
+        padding: 30px 0;
+      }
+      .check {
+        background: linear-gradient(to right, #071432 0, #019595 100%);
+        border-radius: 10px;
+        padding: 20px 20px 20px 65px;
+        position: relative;
+        margin-left: 0;
+      }
+      .check::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 20px;
+        width: 30px;
+        height: 30px;
+        background-image: url('images/check.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: #019595;
+      }
+      .quote {
+        background: #0f1d3c;
+        font-size: 22px;
+        border-radius: 10px;
+        padding: 20px 20px 20px 65px;
+        position: relative;
+        margin-left: 0;
+      }
+      .quote::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 20px;
+        width: 20px;
+        height: 20px;
+        background-image: url('images/quote.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .atention {
+        background: linear-gradient(to right, #071432 0, #f58128 100%);
+        border-radius: 10px;
+        padding: 20px 20px 20px 65px;
+        position: relative;
+        margin-left: 0;
+      }
+      .atention::before {
+        content: '!';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 20px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: 2px solid #f58128;
+        color: #f58128;
+        text-align: center;
+        font-weight: 700;
+      }
+      .spoiler {
+        background: #0e265c;
+        margin: 30px 0;
+        border-radius: 25px;
+        max-width: 70%;
+        box-shadow: 0 0 8px 3px rgb(178 28 123 / 80%);
+        -webkit-box-shadow: 0 0 8px 3px rgb(178 28 123 / 80%);
+        padding: 20px 0;
+        position: relative;
+      }
+      .spoiler__input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+      }
+      .spoiler__label {
+        padding: 15px 30px;
+        font-weight: 700;
+        font-size: 1.2em;
+        cursor: pointer;
+        position: relative;
+      }
+      .spoiler__label::after,
+      .spoiler__label::before {
+        content: '';
+        position: absolute;
+        background-color: #fff;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 8px;
+        width: 2px;
+        transition: all 0.3s;
+      }
+      .spoiler__label::after {
+        right: 2px;
+        transform: rotate(45deg);
+      }
+      .spoiler__label::before {
+        right: 7px;
+        transform: rotate(-45deg);
+      }
+      .spoiler__content {
+        display: none;
+      }
+      .spoiler__input:checked ~ .spoiler__label::after {
+        transform: rotate(135deg);
+      }
+      .spoiler__input:checked ~ .spoiler__label::before {
+        transform: rotate(-135deg);
+      }
+      .spoiler__input:checked ~ .spoiler__content {
+        display: block;
+      }
+      .spoiler__list {
+        list-style: none;
+        counter-reset: li;
+      }
+      .spoiler__list-item {
+        color: #00eceb;
+        font-weight: 700;
+      }
+      .spoiler__list-item {
+        margin-top: 10px;
+      }
+      .spoiler__list-item::before {
+        counter-increment: li;
+        content: counters(li, '.') '. ';
+        opacity: 0.5;
+        color: #fff;
+        font-weight: 400;
+      }
+      .sub__item {
+        font-size: 0.93em;
+      }
+      .questions__item {
+        position: relative;
+        border-radius: 5px;
+        border-left: 3px solid #00eaea;
+      }
+      .questions__item + .questions__item {
+        margin-top: 15px;
+      }
+      .questions__input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+      }
+      .questions__label {
+        display: block;
+        padding: 15px 30px 15px 20px;
+        position: relative;
+        cursor: pointer;
+        background: #0e265c;
+      }
+      .questions__label::after,
+      .questions__label::before {
+        content: '';
+        position: absolute;
+        background-color: #000;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 10px;
+        width: 1.5px;
+        transition: all 0.5s;
+      }
+      .questions__label::after {
+        right: 23px;
+        transform: rotate(45deg);
+      }
+      .questions__label::before {
+        right: 30px;
+        transform: rotate(-45deg);
+      }
+      .questions__content {
+        padding: 20px;
+        background: #0e1f46;
+        display: none;
+      }
+      .questions__input:checked ~ .questions__label::after {
+        transform: rotate(135deg);
+      }
+      .questions__input:checked ~ .questions__label::before {
+        transform: rotate(-135deg);
+      }
+      .questions__input:checked ~ .questions__content {
+        display: block;
+      }
+      .footer {
+        padding: 50px 0;
+        background-color: #001b47;
+      }
+      .footer__text {
+        font-size: 14px;
+      }
+      .scroll-top-btn {
+        width: 60px;
+        height: 50px;
+        position: fixed;
+        bottom: 40px;
+        right: 10px;
+        border: none;
+        background: #fff;
+        box-shadow: 0 3px 30px -5px rgba(0, 0, 0, 0.3);
+        outline: 0;
+        opacity: 0.6;
+        cursor: pointer;
+        z-index: 500;
+        border-radius: 4px;
+        transition: all 0.3s;
+      }
+      .scroll-top-btn::before,
+      .scroll-top-btn::after {
+        content: '';
+        position: absolute;
+        width: 2px;
+        height: 14px;
+        background-color: #4d3bfe;
+
+        border-radius: 1px;
+        top: 16px;
+      }
+      .scroll-top-btn::before {
+        transform: rotate(45deg);
+        top: 16px;
+        left: 24.5px;
+      }
+      .scroll-top-btn::after {
+        transform: rotate(-45deg);
+        right: 24.5px;
+      }
+      .scroll-top-btn:hover {
+        opacity: 1;
+        transform: translateY(-3px) translateZ(0);
+      }
+      .hidden {
+        visibility: hidden;
+        opacity: 0;
+      }
+      @media (max-width: 768px) {
+        .content__inner h1 {
+          font-size: 1.625em;
+        }
+        .content__inner h2 {
+          font-size: 1.4375em;
+          line-height: 1.2;
+        }
+        blockquote {
+          max-width: 100%;
+          margin-right: 0;
+        }
+        .spoiler {
+          max-width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <nav class="menu">
+            <ul class="menu__list">
+              <li class="menu__item"><a class="menu__link" href=" https://mrbit.jp/bonus">BONUS</a></li>
+              <li class="menu__item"><a class="menu__link" href=" https://mrbit.jp/mobile">MOBILE CASINO</a></li>
+            </ul>
+          </nav>
+          <img class="logo__img" src="images/logo.png" alt="logo" width="120" height="61" />
+          <div class="btn-box">
+            <a class="btn__link btn__link--small" href="go">Mr.Bit Casino</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="content">
+      <div class="container">
+        <div class="content__inner">
+          <h1>Mr Bit Casino: Review & Rating</h1>
+          <p>
+            <picture>
+              <source media="(min-width: 1000px)" srcset="images/large-promo.webp" />
+              <source media="(min-width: 768px)" srcset="images/large-promo-768.webp" />
+              <source media="(min-width: 465px)" srcset="images/large-promo-320.webp" />
+              <img src="images/large-promo-320.webp" width="100%" height="auto" alt="screanshot" />
+            </picture>
+          </p>
+          <p>
+            Mr Bit Casino is one of the first online casinos that start accepting cryptocurrencies for payment. The project was
+            launched in 2018 and is considered to be one of the best blockchain casinos 2023. The project operates under the laws
+            of Malta and has a valid Malta Gaming Authority license MGA/B2C/450/2017.
+          </p>
+          <p>An important feature of Mr.Bit Casino is that it accepts many cryptocurrencies for payment:</p>
+          <ul>
+            <li>Bitcoin</li>
+            <li>Bitcoin Cash</li>
+            <li>Dogecoin</li>
+            <li>Litecoin</li>
+            <li>Monero</li>
+            <li>Ripple Dash</li>
+          </ul>
+          <p>
+            The casino’s user-friendly official website will allow players to register quickly, make deposit and start playing.
+          </p>
+          <div class="btn-box">
+            <a class="btn__link" href="go">Play at Mr.Bit Casino</a>
+          </div>
+          <div class="spoiler">
+            <input class="spoiler__input" type="checkbox" id="content" />
+            <label class="spoiler__label" for="content">Contents</label>
+            <div class="spoiler__content">
+              <ol class="spoiler__list">
+                <li class="spoiler__list-item">
+                  <a href="#website">Mr Bit Casino Official Website</a>
+                </li>
+                <li class="spoiler__list-item">
+                  <a href="#games">MrBit Casino Games</a>
+                </li>
+                <li class="spoiler__list-item">
+                  <a href="#mobile">Mr Bit Mobile Version</a>
+                </li>
+                <li class="spoiler__list-item">
+                  <a href="#registration">Registration in MrBit Casino</a>
+                </li>
+                <li class="spoiler__list-item">
+                  <a href="#bonus">Mr Bit Casino Bonus Codes 2023</a>
+                  <ol class="spoiler__list">
+                    <li class="spoiler__list-item sub__item"><a href="#welcome-bonus">Welcome Bonus</a></li>
+                    <li class="spoiler__list-item sub__item">
+                      <a href="#weekend-free-spins-giveaway">Weekend Free Spins Giveaway</a>
+                    </li>
+                    <li class="spoiler__list-item sub__item"><a href="#party-bonus">Party Bonus</a></li>
+                    <li class="spoiler__list-item sub__item"><a href="#loyalty-program">Loyalty Program</a></li>
+                  </ol>
+                </li>
+                <li class="spoiler__list-item">
+                  <a href="#payment-methods-at-MrBit-casino">Payment Methods at Mr Bit Casino</a>
+                </li>
+                <li class="spoiler__list-item">
+                  <a href="#technical-support">Technical Support</a>
+                </li>
+                <li class="spoiler__list-item">
+                  <a href="#conclusion">Conclusion</a>
+                </li>
+                <li class="spoiler__list-item">
+                  <a href="#MrBit-Casino-FAQ">MrBit Casino FAQ</a>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="content" id="website">
+      <div class="container">
+        <div class="content__inner">
+          <h2>Mr Bit Casino Official Website</h2>
+          <p>
+            The official site of Mr Bit Casino is in dark blue colors and has a minimalist design. The creators of this casino had
+            plenty of experience with other gambling projects and have developed a simple site that’s easy to use.
+          </p>
+          <p>
+            Right from the main page you can get to the section of the site you want. If you click on the menu button in the top
+            left corner, you can go to the sections:
+          </p>
+          <ul>
+            <li>Games</li>
+            <li>Promotions</li>
+            <li>Tournaments</li>
+            <li>Status</li>
+          </ul>
+          <p>You can also change the language of the site, log in to your account or register with the casino.</p>
+          <p>The site is translated into several languages: English, German, Russian, French and Bulgarian.</p>
+          <p>
+            Just below the main banner you can select a game category, use the search to find the right slot or go to the latest
+            and greatest games at Mr.Bit Casino.
+          </p>
+          <p>We recommend to try the slot machines from these categories!</p>
+        </div>
+      </div>
+    </section>
+    <section class="content" id="games">
+      <div class="container">
+        <div class="content__inner">
+          <h2>MrBit Casino Games</h2>
+          <p>
+            <img src="images/games-mrbit.webp" width="1000" height="720" alt="screanshot" />
+          </p>
+          <p>
+            Every player at Mr Bit Casino has more than 3695 slots and other games from the best software providers. On the casino
+            site you can play slots from the following developers: 1×2 Gaming, 2by2 gaming, 4theplayer, Adoptit, Amatic, Apollo,
+            Arcadem, Authentic, Bally, Betdigital, BetSoft, Bfgames, Big Time Gaming, Booming, Candlebets, Chance Interactiv,
+            Ctgaming, EGT, ELK, Endorphina, Fantasma Games, Foxium, Fugaso, Games Inc, Gamomat, Genesis, Ggames, Givme, Golden
+            Hero, Hacksaw Gaming, High5 Games, Inspired, Iron Dog, Isoftbet, Jftw, Kalamba, Leander, Leap Gaming, Lightning Box,
+            Merkur, Microgaming, Net Gaming, NextGen, Nolimit City, Old Skool Studios, Peter Sons, Pgsoft, Rabcat, Realistic, Reel
+            Play, Rubyplay, Scientific Games, Shuffle, Side City, Skywind, Slingshot, Spinomenal, Spribe, Stakelogic, Swintt,
+            Synot, Thunderkick, Tom Horn, Triple Edge Studios, Truelab, WMS.
+          </p>
+          <blockquote class="check">
+            <span>
+              In addition, you can play all of the games on the official Mister Bit Casino website for free. The exception is the
+              games in the Live Casino category.
+            </span>
+          </blockquote>
+          <p>Categories of games that you can play on the MrBit Casino website:</p>
+          <ul>
+            <li>Slots</li>
+            <li>Popular</li>
+            <li>Jackpots</li>
+            <li>Tables</li>
+            <li>Live Casino</li>
+            <li>Video poker</li>
+            <li>Others</li>
+          </ul>
+          <p>
+            If you click on the field “Search”, you can also filter necessary games on the basis of payout level and volatility.
+          </p>
+          <p>
+            Payout is the ratio of winnings to bets during the past day. The higher the payout value, the higher the winnings in
+            these games. You can select the payout level:
+          </p>
+          <ul>
+            <li>Below 0%</li>
+            <li>From 0% to 100%</li>
+            <li>From 100% and higher</li>
+          </ul>
+          <p>
+            The Volatility Level is the ratio of winnings to bets made during the last day. The lower this value is, the more
+            often you will win in these games. You can choose between the following volatility levels: <b>Low</b>, <b>Medium</b>,
+            <b>High</b> and <b>Adjusted</b>.
+          </p>
+          <div class="btn-box">
+            <a class="btn__link" href="go">Try Mr.Bit Games</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="content" id="mobile">
+      <div class="container">
+        <div class="content__inner">
+          <h2>Mr Bit Mobile Version</h2>
+          <p>
+            Mr Bit Casino doesn’t have a mobile app, but that doesn’t make it a bad casino. The site has an adaptive version that
+            adjusts to any device. To access the mobile version, just follow the regular website link. This will be enough to
+            start playing for real money.
+          </p>
+          <p>Mobile version supports smartphones and tablets based on iOS, Android and Windows Phone.</p>
+        </div>
+      </div>
+    </section>
+    <section class="content" id="registration">
+      <div class="container">
+        <div class="content__inner">
+          <h2>Registration in MrBit Casino</h2>
+          <p>
+            We recommend you register at Mr Bit Casino, as registered users get full access to the casino facilities. Besides, the
+            registration process takes no more than 15 seconds. To register you need:
+          </p>
+          <ul>
+            <li>Click the button “Registration”.</li>
+            <li>
+              Provide a valid email address and a strong password. We do not recommend to use passwords such as: “123456” and
+              “qwerty”.
+            </li>
+            <li>Choose the currency of the account.</li>
+            <li>Confirm that you are an adult.</li>
+          </ul>
+          <p>
+            After registration you can go straight to game. Further, it is recommended to confirm your email by clicking on the
+            link in the letter from Mr Bit Casino.
+          </p>
+          <blockquote class="quote">
+            <span>
+              <b>Congratulations!</b> You are registered, and now you can top up your account balance and start playing.
+            </span>
+          </blockquote>
+          <p>We recommend that you use auto-save passwords in your browser to quickly log in to your account at MrBit.</p>
+          <blockquote class="atention">
+            <span>According to casino rules, only adults may register on the site.</span>
+          </blockquote>
+          <p>
+            Also, please note that you will need to verify your account before you can apply for a payout. To do this, you need to
+            send scans or photos of your documents in your personal account or via online chat.
+          </p>
+          <p>The verification process will take less than 10 minutes. For new accounts it will only take one time.</p>
+          <div class="btn-box">
+            <a class="btn__link" href="go">Sign Up at Mr.Bit</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="content" id="bonus">
+      <div class="container">
+        <div class="content__inner">
+          <h2>Mr Bit Casino Bonus Codes 2023</h2>
+          <p>
+            <img src="images/mr-bit-bonus.png" width="1000" height="768" alt="screanshot" loading="lazy" />
+          </p>
+          <p>
+            The team has gone to great lengths to come up with great promotional offers that will increase your chances of
+            winning. The Mr Bit Casino bonuses are designed to make the player feel comfortable in the first stages of the game.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="content" id="welcome-bonus">
+      <div class="container">
+        <div class="content__inner">
+          <h2>Welcome Bonus</h2>
+          <p>
+            When you activate the Welcome Bonus, you will receive 100% for your first deposit and 50 Free Spins on Jungle Jim and
+            the Lost Sphinx slot. The bonus is available to all new players and is valid for 30 days from registration.
+          </p>
+          <p>
+            The maximum amount of the bonus is €500 and the minimum deposit to receive the bonus is €10. The wagering requirements
+            for a 100% bonus are x27 on bonus + deposit. After wagering the deposit bonus, you will receive 10 Free Spins every
+            day for 5 days.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="content" id="weekend-free-spins-giveaway">
+      <div class="container">
+        <div class="content__inner">
+          <h2>Weekend Free Spins Giveaway</h2>
+          <p>You can get these bonuses on the weekend: Friday, Saturday and Sunday. Each day has its own bonus:</p>
+          <ul>
+            <li>Friday – 30 Free Spins at Time Machine slot at €0.20</li>
+            <li>Saturday – 30 Free Spins in Mount Magmas slot at €0.20</li>
+            <li>Sunday – 30 Free Spins at Book of Aztec at €0.30</li>
+          </ul>
+          <p>The minimum deposit for the free spins is €20/€20/€30.</p>
+        </div>
+      </div>
+    </section>
+    <section class="content" id="party-bonus">
+      <div class="container">
+        <div class="content__inner">
+          <h2>Party Bonus</h2>
+          <p>A great bonus to be had on Wednesday! Get a 15% bonus on a deposit amount of €10 or more.</p>
+          <p>The maximum bonus is €100.</p>
+          <div class="btn-box">
+            <a class="btn__link" href="go">Claim Bonus</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="content" id="loyalty-program">
+      <div class="container">
+        <div class="content__inner">
+          <h2>Loyalty Program</h2>
+          <p>
+            <img src="images/mr-bit-casino-statuses.webp" width="1000" height="768" alt="screanshot" loading="lazy" />
+          </p>
+          <p>
+            The loyalty program at Mr Bit Casino is great for players with high deposits and stakes, as well as newcomers. While
+            playing for real money, you will receive BitPoints loyalty points. For every €80 wagered, a player gets 1 BitPoint.
+          </p>
+          <blockquote class="quote">
+            <span>The rule is simple: <b>the more you play, the more points you earn</b>.</span>
+          </blockquote>
+          <p>
+            There are a total of 23 levels in the loyalty scheme. All players start at level 0. With each new level the player
+            earns internal currency a little faster.
+          </p>
+          <p>Players on level 23 get a bonus of 50 free spins at €2, a cash bonus of €500 and a cashback of 13%.</p>
+          <p>Take part in our various promotions and tournaments and win real money. See the tournaments section for rules.</p>
+          <p>
+            VIP players can participate in extra tournaments for bigger prizes. Check the tournaments section more often and keep
+            up to date with the tournaments. The prize pool can be either real money or you can use your own internal currency –
+            BitPoints.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="content" id="payment-methods-at-MrBit-casino">
+      <div class="container">
+        <div class="content__inner">
+          <h2>Payment Methods at Mr Bit Casino</h2>
+          <p>
+            Anyone who has completed the registration process can make a deposit into the Mr Bit casino. You can deposit money
+            through the Cashier section.
+          </p>
+          <p>
+            To withdraw money go to “Cashier” in the personal cabinet and click on the “Payments” tab. Your account must be
+            verified in order for you to request a payout.
+          </p>
+          <p>
+            The main casino currencies are cryptocurrencies, but you can also play for regular currencies: <b>euros</b>,
+            <b>dollars</b>, <b>roubles</b>, <b>baht</b>, <b>kroner</b>.
+          </p>
+          <p>Payment methods available:</p>
+          <ul>
+            <li>Bank transfer</li>
+            <li>Visa, MasterCard, Maestro, VISA Electron</li>
+            <li>Web Money</li>
+            <li>Much Better</li>
+            <li>ecoPayz</li>
+            <li>Skrill</li>
+            <li>Neteller</li>
+            <li>Cryptocurrencies</li>
+            <li>Mobile phone balance</li>
+          </ul>
+          <p>
+            The speed of withdrawal depends directly on the size of the withdrawal. The regulated period of withdrawal – within 24
+            hours from the time of order. Typically, Mr Bit casino usually withdraws money within 1 hour. But in the case when you
+            get a big win, these terms may be extended.
+          </p>
+          <p>Players with a high level in the loyalty program receive payments almost instantly.</p>
+        </div>
+      </div>
+    </section>
+    <section class="content" id="technical-support">
+      <div class="container">
+        <div class="content__inner">
+          <h2>Technical Support</h2>
+          <p>
+            <img src="images/support.webp" width="1000" height="768" alt="screanshot" loading="lazy" />
+          </p>
+          <p>
+            Various issues may arise during the game or during the registration phase. You may at any time contact the technical
+            support team, which is available 24/7:
+          </p>
+          <ul>
+            <li>Through <b>online chat</b> (located at the bottom right corner of your screen)</li>
+            <li>By telephone <b>+448081641250</b></li>
+            <li>By email <b>support@mrbit.com</b></li>
+            <li>Via Telegram bot <b>MrBit_EUBot</b></li>
+            <li>Via Facebook messenger</li>
+          </ul>
+          <p>
+            Any questions on registration, deposit, activation of bonus and winnings withdrawal are successfully solved in the
+            chat with operators who answer in one minute.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="content" id="conclusion">
+      <div class="container">
+        <div class="content__inner">
+          <h2>Conclusion</h2>
+          <p>
+            Mr Bit Casino is a great online casino and for high rollers as well as for beginners who are just getting acquainted
+            with the world of online casinos. It has a rich selection of slot machines and other games, modern providers and great
+            bonuses. Confidence in the project is backed up by the MGA license and the number of payment methods, including
+            cryptocurrencies.
+          </p>
+          <p>Try all these privileges right now. Sign up and start playing at the best Mr.Bit Casino.</p>
+          <div class="btn-box">
+            <a class="btn__link" href="go">Play at Mr.Bit Casino</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="content" id="MrBit-Casino-FAQ">
+      <div class="container">
+        <div class="content__inner">
+          <h2>MrBit Casino FAQ</h2>
+          <div class="questions__item">
+            <input class="questions__input" type="checkbox" id="question-1" />
+            <label class="questions__label" for="question-1">Is Mr Bit Casino licensed?</label>
+            <div class="questions__content">
+              Yes. The casino is registered under the laws of Malta and is licensed by the Malta Gaming Authority
+              MGA/B2C/450/2017.
+            </div>
+          </div>
+          <div class="questions__item">
+            <input class="questions__input" type="checkbox" id="question-2" />
+            <label class="questions__label" for="question-2">Can I play for free at Mr.Bit Casino?</label>
+            <div class="questions__content">
+              Yes, you can play Mr.Bit Casino for free in demo mode. In this mode, you play with the contingent chips provided by
+              the casino.
+            </div>
+          </div>
+          <div class="questions__item">
+            <input class="questions__input" type="checkbox" id="question-3" />
+            <label class="questions__label" for="question-3">How do I deposit at Mr.Bit Casino?</label>
+            <div class="questions__content">
+              You can make deposit by Visa, MasterCard, Maestro, Crypto currency (BTC, BCH, DOGE, LTC, XMR, XRP, DASH), mobile
+              phone balance and other payment methods.
+            </div>
+          </div>
+          <div class="questions__item">
+            <input class="questions__input" type="checkbox" id="question-4" />
+            <label class="questions__label" for="question-4">In what languages is Mr.Bit translated?</label>
+            <div class="questions__content">
+              The official website of Mr. Bit casino has been translated into English, German, Russian, French and Bulgarian.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <p class="footer__text">© 2023 Mr Bit Casino</p>
+        </div>
+      </div>
+    </footer>
+    <button class="scroll-top-btn hidden"></button>
+    <script>
+      const d = document
+      const w = window
+
+      d.addEventListener('DOMContentLoaded', e => {
+        scrollToTop('.scroll-top-btn')
+      })
+
+      function scrollToTop(btnScroll) {
+        const $scrollBtn = d.querySelector(btnScroll)
+
+        d.addEventListener('scroll', e => {
+          let scrollTop = w.pageYOffset || d.documentElement.scrollTop
+
+          if (scrollTop > 100) {
+            $scrollBtn.classList.remove('hidden')
+          } else {
+            $scrollBtn.classList.add('hidden')
+          }
+        })
+        d.addEventListener('click', e => {
+          if (e.target.matches(btnScroll)) {
+            w.scrollTo({
+              behavior: 'smooth',
+              top: 0,
+            })
+          }
+        })
+      }
+      const anchors = document.querySelectorAll('a[href*="#"]')
+
+      for (let anchor of anchors) {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault()
+
+          const blockID = anchor.getAttribute('href').substr(1)
+
+          document.getElementById(blockID).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+          })
+        })
+      }
+    </script>
+  </body>
+</html>
