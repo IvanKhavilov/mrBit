@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Mr Bit Casino gives a huge range of bonus offers, including a welcome bonus of 100% on your first deposit up to €500. Get verified and receive a no deposit bonus in the form of free spins!"
+    />
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
+    <title>Mr Bit Bonus — Welcome and No Deposit Bonus Up To €500</title>
+    <style type="text/css">
+      *,
+      ::after,
+      ::before {
+        box-sizing: border-box;
+      }
+      body {
+        padding: 0;
+        margin: 0;
+        background-color: #071432;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+          'Helvetica Neue', sans-serif;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.5;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      ul {
+        padding: 0;
+        margin: 0;
+      }
+      ul > li {
+        list-style: none;
+      }
+      p {
+        margin: 0;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        margin: 0;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+      p > img {
+        display: block;
+        margin: 0 auto;
+      }
+      .content h1,
+      .content h2,
+      .content h3 {
+        text-align: center;
+        border-bottom: 3px solid #00eaea;
+        padding-bottom: 15px;
+        margin-bottom: 25px;
+      }
+      .content__inner h1 {
+        font-size: 2.4375em;
+      }
+      .content__inner h2 {
+        font-size: 1.9375em;
+      }
+      .content__inner h3 {
+        font-size: 1.5625em;
+      }
+      .content__inner p {
+        margin-bottom: 1.7em;
+      }
+      .content__inner ul {
+        padding: 0;
+        margin-left: 25px;
+        max-width: 100%;
+        margin-top: 1.5em;
+        margin-bottom: 2em;
+      }
+      .content__inner ul > li {
+        position: relative;
+        padding-left: 2em;
+      }
+      .content__inner ul > li::before {
+        content: '';
+        position: absolute;
+        top: 0.5em;
+        left: 0;
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border: 2px solid #00eaea;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+      }
+      .main {
+        color: #00eceb;
+        font-weight: 800;
+      }
+      .container {
+        max-width: 1190px;
+        margin: 0 auto;
+        padding: 0 45px;
+      }
+      .header {
+        box-shadow: inset 0 -1px 0 0 #404040;
+      }
+      .header__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 15px;
+      }
+      .menu__list {
+        display: flex;
+        align-items: center;
+      }
+      .menu__item + .menu__item {
+        margin-left: 30px;
+      }
+      .menu__item--disabled:hover {
+        color: #00b8bf;
+        cursor: text;
+      }
+      .menu__link {
+        font-size: 0.8em;
+        font-weight: 800;
+        text-transform: uppercase;
+        opacity: 0.8;
+        transition: all 0.3s;
+        position: relative;
+      }
+      .menu__link::after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+        width: 40%;
+        height: 2px;
+        transform: scaleX(0);
+        transform-origin: center center;
+        transition: all 0.2s;
+        background-color: #fff;
+      }
+      .menu__link:hover {
+        opacity: 1;
+      }
+      .menu__link:hover::after {
+        transform: scaleX(1);
+      }
+      .btn-box {
+        text-align: center;
+      }
+      .btn__link {
+        display: inline-block;
+        background: linear-gradient(90deg, #ec0766, #743090) !important;
+        padding: 1rem 2rem;
+        border-radius: 10px;
+        font-size: 1.25rem;
+        line-height: 1.5;
+        transition: all 0.3s ease;
+      }
+      .btn__link--small {
+        font-size: 0.875rem;
+      }
+      .btn__link:hover {
+        opacity: 0.8;
+        transform: translateY(-3px) translateZ(0);
+        box-shadow: 0 15px 35px -16px rgba(0, 0, 0, 0.9);
+      }
+      .content__inner {
+        padding: 30px 0;
+      }
+      .question {
+        background: linear-gradient(to right, #e3f1f4 0, #e3edff 100%);
+        padding: 20px 20px 20px 65px;
+        position: relative;
+        margin-left: 0;
+      }
+      .question::before {
+        content: '?';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 20px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: 2px solid #3da2e0;
+        color: #3da2e0;
+        text-align: center;
+        font-weight: 700;
+      }
+      .spoiler {
+        background: #0e265c;
+        margin: 30px 0;
+        border-radius: 25px;
+        max-width: 70%;
+        box-shadow: 0 0 8px 3px rgb(178 28 123 / 80%);
+        -webkit-box-shadow: 0 0 8px 3px rgb(178 28 123 / 80%);
+        padding: 20px 0;
+        position: relative;
+      }
+      .spoiler__input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+      }
+      .spoiler__label {
+        padding: 15px 30px;
+        font-weight: 700;
+        font-size: 1.2em;
+        cursor: pointer;
+        position: relative;
+      }
+      .spoiler__label::after,
+      .spoiler__label::before {
+        content: '';
+        position: absolute;
+        background-color: #fff;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 8px;
+        width: 2px;
+        transition: all 0.3s;
+      }
+      .spoiler__label::after {
+        right: 2px;
+        transform: rotate(45deg);
+      }
+      .spoiler__label::before {
+        right: 7px;
+        transform: rotate(-45deg);
+      }
+      .spoiler__content {
+        display: none;
+      }
+      .spoiler__input:checked ~ .spoiler__label::after {
+        transform: rotate(135deg);
+      }
+      .spoiler__input:checked ~ .spoiler__label::before {
+        transform: rotate(-135deg);
+      }
+      .spoiler__input:checked ~ .spoiler__content {
+        display: block;
+      }
+      .spoiler__list {
+        list-style: none;
+        counter-reset: li;
+        padding-left: 30px;
+      }
+      .spoiler__list-item {
+        color: #00eceb;
+        font-weight: 700;
+      }
+      .spoiler__list-item {
+        margin-top: 10px;
+      }
+      .spoiler__list-item::before {
+        counter-increment: li;
+        content: counters(li, '.') '. ';
+        opacity: 0.5;
+        color: #fff;
+        font-weight: 400;
+      }
+      .sub__item {
+        font-size: 0.93em;
+      }
+      .footer {
+        padding: 50px 0;
+        background-color: #001b47;
+      }
+      .footer__text {
+        font-size: 14px;
+      }
+      .scroll-top-btn {
+        width: 60px;
+        height: 50px;
+        position: fixed;
+        bottom: 40px;
+        right: 10px;
+        border: none;
+        background: #fff;
+        box-shadow: 0 3px 30px -5px rgba(0, 0, 0, 0.3);
+        outline: 0;
+        opacity: 0.6;
+        cursor: pointer;
+        z-index: 500;
+        border-radius: 4px;
+        transition: all 0.3s;
+      }
+      .scroll-top-btn::before,
+      .scroll-top-btn::after {
+        content: '';
+        position: absolute;
+        width: 2px;
+        height: 14px;
+        background-color: #4d3bfe;
+
+        border-radius: 1px;
+        top: 16px;
+      }
+      .scroll-top-btn::before {
+        transform: rotate(45deg);
+        top: 16px;
+        left: 24.5px;
+      }
+      .scroll-top-btn::after {
+        transform: rotate(-45deg);
+        right: 24.5px;
+      }
+      .scroll-top-btn:hover {
+        opacity: 1;
+        transform: translateY(-3px) translateZ(0);
+      }
+      .hidden {
+        visibility: hidden;
+        opacity: 0;
+      }
+      @media (max-width: 768px) {
+        .content__inner h1 {
+          font-size: 1.625em;
+        }
+        .content__inner h2 {
+          font-size: 1.4375em;
+          line-height: 1.2;
+        }
+        .container {
+          padding: 0 20px;
+        }
+        blockquote {
+          max-width: 100%;
+          margin-right: 0;
+        }
+        .header__inner {
+          flex-direction: column;
+          justify-content: center;
+        }
+        .menu {
+          order: 2;
+        }
+        .menu__list {
+          flex-direction: column;
+          justify-content: center;
+        }
+        .menu__item {
+          text-align: center;
+        }
+        .menu__item + .menu__item {
+          margin-left: 0;
+          margin-top: 5px;
+        }
+        .btn__link--small {
+          margin: 10px 0;
+        }
+        .spoiler {
+          max-width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <nav class="menu">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a class="menu__link menu__item--disabled" href="#">BONUS</a>
+              </li>
+              <li class="menu__item"><a class="menu__link" href="https://mrbit.jp/mobile">MOBILE CASINO</a></li>
+            </ul>
+          </nav>
+          <a class="logo" href="https://mrbit.jp/index">
+            <img class="logo__img" src="images/logo.png" alt="logo" width="120" height="61" />
+          </a>
+          <div class="btn-box">
+            <a class="btn__link btn__link--small" href="go">Mr.Bit Casino</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="content">
+      <div class="container">
+        <div class="content__inner">
+          <h1>Mr Bit Bonus</h1>
+          <p>
+            <picture>
+              <source media="(min-width: 1000px)" srcset="images/mr-bit-bonus-page.webp" />
+              <source media="(min-width: 768px)" srcset="images/mr-bit-bonus-page-768.webp" />
+              <source media="(min-width: 465px)" srcset="images/mr-bit-bonus-page-320.webp" />
+              <img src="images/mr-bit-bonus-page-320.webp" width="100%" height="100%" alt="screanshot" />
+            </picture>
+          </p>
+          <p>
+            Every gambler coming to an online casino for the first time knows that he can always count on welcome bonuses.
+            <a class="main" href="https://mrbit.jp/index">Mr Bit</a>
+            is no exception and offers a wide bonus program for all players, both newcomers, and those who have long made their
+            first deposit.
+          </p>
+          <p>
+            On this page you will find all the information you need about Mr Bit bonuses, which work in 2023 and give the best
+            experience in slot machines.
+          </p>
+          <div class="spoiler">
+            <input class="spoiler__input" type="checkbox" id="content" />
+            <label class="spoiler__label" for="content">Contents</label>
+            <div class="spoiler__content">
+              <ol class="spoiler__list">
+                <li class="spoiler__list-item">
+                  <a href="#bonus">Mr Bit Bonus Codes List 2023</a>
+                  <ol class="spoiler__list">
+                    <li class="spoiler__list-item sub__item"><a href="#welcome-bonus">Welcome Bonus</a></li>
+                    <li class="spoiler__list-item sub__item"><a href="#Mr-Bit-no-deposit-bonus">Mr Bit No Deposit Bonus</a></li>
+                    <li class="spoiler__list-item sub__item"><a href="#cyber-live">Cyber Live</a></li>
+                    <li class="spoiler__list-item sub__item">
+                      <a href="#weekend-free-spins-giveaway">Weekend Free Spins Giveaway</a>
+                    </li>
+                    <li class="spoiler__list-item sub__item">
+                      <a href="#Mr-Bit-at-social-networks">Mr Bit at Social Networks</a>
+                    </li>
+                    <li class="spoiler__list-item sub__item">
+                      <a href="#status-system-with-a-levels-program">Status System with a Levels Program</a>
+                    </li>
+                  </ol>
+                </li>
+                <li class="spoiler__list-item">
+                  <a href="#activate-bonus">How to activate Mr. Bit Bonus?</a>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="content" id="bonus">
+      <div class="container">
+        <div class="content__inner">
+          <h2>Mr Bit Bonus Codes List 2023</h2>
+          <p>
+            Bonus offers from MrBit online casino can be spread through activation in your account, or through promo codes. We
+            want to introduce you to the main ones:
+          </p>
+          <ul>
+            <li>Welcome Bonus,</li>
+            <li>Cyber Live,</li>
+            <li>No deposit bonus (aka verification bonus),</li>
+            <li>WEEKEND FREE SPINS GIVEAWAY,</li>
+            <li>Bonuses from social networks,</li>
+            <li>Loyalty Program,</li>
+            <li>And others.</li>
+          </ul>
+          <p>These are promotions that are available to players at the moment.</p>
+        </div>
+      </div>
+    </section>
+    <section class="content" id="welcome-bonus">
+      <div class="container">
+        <div class="content__inner">
+          <h3>Welcome Bonus</h3>
+          <p>
+            <picture>
+              <source media="(min-width: 1000px)" srcset="images/welcome-bonus-mr-bit.webp" />
+              <source media="(min-width: 768px)" srcset="images/welcome-bonus-mr-bit-768.webp" />
+              <source media="(min-width: 465px)" srcset="images/welcome-bonus-mr-bit-320.webp" />
+              <img src="images/welcome-bonus-mr-bit-320.webp" width="100%" height="100%" alt="screanshot" loading="lazy" />
+            </picture>
+          </p>
+          <p>
+            The administration of Mr.Bit appreciates each of their players, but they are especially happy to see those who came to
+            the online casino for the first time and chose our club for that. Each player who registered for the first time on the
+            site can get a welcome bonus.
+          </p>
+          <blockquote class="check">
+            <span>
+              The welcome bonus at Mr Bit Casino is 100% and can be up to €500. You will also get 50 free spins in the slot
+              “Jungle Jim and the Lost Sphinx” immediately after wagering the deposit bonus.
+            </span>
+          </blockquote>
+          <p>
+            The wagering requirements for the welcome bonus are 35x on deposit and bonus, and 45x on winnings from bonus spins.
+            The player should meet the wagering requirements within 7 days, otherwise the bonus will be canceled.
+          </p>
+          <div class="btn-box">
+            <a class="btn__link" href="go">Claim Bonus</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="content" id="Mr-Bit-no-deposit-bonus">
+      <div class="container">
+        <div class="content__inner">
+          <h3>Mr Bit No Deposit Bonus</h3>
+          <p>
+            <picture>
+              <source media="(min-width: 1000px)" srcset="images/no-deposit-bonus-mrbit.webp" />
+              <source media="(min-width: 768px)" srcset="images/no-deposit-bonus-mrbit-786.webp" />
+              <source media="(min-width: 465px)" srcset="images/no-deposit-bonus-mrbit-320.webp" />
+              <img src="images/no-deposit-bonus-mrbit-320.webp" width="100%" height="100%" alt="screanshot" loading="lazy" />
+            </picture>
+          </p>
+          <p>
+            Also known as the “Verification Prize”. No deposit bonus at Mr. Bit can get anyone who provides their documents for
+            verification. Verification procedure is mandatory in any online casino, our difference is that we also give bonuses
+            for it!
+          </p>
+          <p>
+            This no deposit bonus at Mr. Bit Casino grants you to 50 free spins at Volcano Wealth from the developer EGT. To get
+            the no deposit bonus at Mr Bit you need to provide a scan or photo of one of the documents:
+          </p>
+          <ul>
+            <li>Passport or ID (front and back),</li>
+            <li>Driver’s license (front and back side),</li>
+            <li>Residence Permit.</li>
+          </ul>
+          <p>
+            You are also required to provide additional documents that confirm your address of residence and the validity of the
+            main document: utility bill (water or electricity), bank statement with the address of the recipient, tax return.
+            Documents must be issued not later than 3 months.
+          </p>
+          <p>
+            The wagering for this bonus is 40x, the period of wagering is also 7 days. See other terms and conditions in the
+            “Bonuses” section of your account.
+          </p>
+          <div class="btn-box">
+            <a class="btn__link" href="go">Claim Bonus</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="content" id="cyber-live">
+      <div class="container">
+        <div class="content__inner">
+          <h3>Cyber Live</h3>
+          <p>
+            <picture>
+              <source media="(min-width: 1000px)" srcset="images/cyber-live-bonus.webp" />
+              <source media="(min-width: 768px)" srcset="images/cyber-live-bonus-760.webp" />
+              <source media="(min-width: 465px)" srcset="images/cyber-live-bonus-320.webp" />
+              <img src="images/cyber-live-bonus-320.webp" width="100%" height="100%" alt="screanshot" loading="lazy" />
+            </picture>
+          </p>
+          <p>
+            A promotion in which Mr Bit offers users to participate on Tuesdays and Fridays. This offer will appeal to table game
+            lovers, because the bonus is given to play Lightning roulette in a live casino. Like the welcome bonus, there are
+            options here:
+          </p>
+          <ul>
+            <li>A €5 roulette bet, €15 minimum deposit.</li>
+            <li>A €15 roulette bet, €50 minimum deposit.</li>
+            <li>A €35 roulette bet with a €100 minimum deposit.</li>
+          </ul>
+          <p>Try your luck at Lightning Roulette from Evolution.</p>
+          <div class="btn-box">
+            <a class="btn__link" href="go">Claim Bonus</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="content" id="weekend-free-spins-giveaway">
+      <div class="container">
+        <div class="content__inner">
+          <h3>Weekend Free Spins Giveaway</h3>
+          <p>
+            <picture>
+              <source media="(min-width: 1000px)" srcset="images/mr-bit-free-spins-giveaway-promo.webp" />
+              <source media="(min-width: 768px)" srcset="images/mr-bit-free-spins-giveaway-promo-768.webp" />
+              <source media="(min-width: 465px)" srcset="images/mr-bit-free-spins-giveaway-promo-320.webp" />
+              <img
+                src="images/mr-bit-free-spins-giveaway-promo-320.webp"
+                width="100%"
+                height="100%"
+                alt="screanshot"
+                loading="lazy"
+              />
+            </picture>
+          </p>
+          <p>Everyone loves the weekend, and MrBit knows it, so we’re offering a promo:</p>
+          <ul>
+            <li>Deposit €25 or more on Friday and get 35 free spins on Knight Rider at €0.20 per spin.</li>
+            <li>
+              For the Saturday bonus, you must also deposit a minimum of €25 to get 35 free spins in Hell’s Hogs at €0.20 per
+              spin.
+            </li>
+            <li>Playing Mr. Bit on Sundays? Deposit a minimum of €25 and get 30 free spins on Medusa Hunt at €0.25.</li>
+          </ul>
+          <p>
+            The promotion is valid for the specified days from 00:00 to 23:59, after activating the bonus you will have 7 days to
+            meet the conditions for wagering, and they are 12x on the deposit and bonus balance.
+          </p>
+          <div class="btn-box">
+            <a class="btn__link" href="go">Claim Bonus</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="content" id="Mr-Bit-at-social-networks">
+      <div class="container">
+        <div class="content__inner">
+          <h3>Mr Bit at Social Networks</h3>
+          <p>Subscribe to our Instagram and Facebook accounts, because we post there:</p>
+          <ul>
+            <li>Up-to-date news about upcoming tournaments and other major events,</li>
+            <li>Profitable promo codes you won’t find anywhere else,</li>
+            <li>Information about new slots and online casino games.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="content" id="status-system-with-a-levels-program">
+      <div class="container">
+        <div class="content__inner">
+          <h3>Status System with a Levels Program</h3>
+          <p>
+            <picture>
+              <source media="(min-width: 1000px)" srcset="images/vip-mrbit.webp" />
+              <source media="(min-width: 768px)" srcset="images/vip-mrbit-768.webp" />
+              <source media="(min-width: 465px)" srcset="images/vip-mrbit-320.webp" />
+              <img src="images/vip-mrbit-320.webp" width="100%" height="100%" alt="screanshot" loading="lazy" />
+            </picture>
+          </p>
+          <p>
+            The Mr. Bit status program is designed for players who regularly visit online casinos. The rule of the status program
+            is simple – the more you play, the more points you earn and the higher the level you have.
+          </p>
+          <p>
+            The program has a total of 23 levels, with each level offering a different level of benefits. The main benefits you
+            receive as a participant in the status program are:
+          </p>
+          <ul>
+            <li>Cashback – from 2 to 13%, which will be credited on the 1st of each month.</li>
+            <li>Free spins – from 10 spins at €0.10 to 50 spins at €2.00.</li>
+            <li>
+              Cash Bonuses – Get real money just for reaching a level. For instance, you’ll get €10 for reaching level 10 and €500
+              for reaching the maximum level 23.
+            </li>
+          </ul>
+          <p>
+            The benefits of the status loyalty program don’t stop there, of course. Players will also get special offers,
+            attractive bonuses, participation in closed tests of new slot machines, and other VIP player privileges.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="content" id="activate-bonus">
+      <div class="container">
+        <div class="content__inner">
+          <h2>How to activate Mr. Bit Bonus?</h2>
+          <p>
+            To activate any bonus you must first register at the casino Mr Bit. After that, you will be able to access your
+            account and make a deposit.
+          </p>
+          <blockquote class="question">
+            <span>To receive a no deposit bonus, you do not need to make a deposit.</span>
+          </blockquote>
+          <p>
+            After you deposit, you will see a window with promos available to you. Choose one of the bonuses and click on it. The
+            system will credit the bonus to your balance and then you can start playing.
+          </p>
+          <p>
+            Please note that the activation of the bonus is only possible on those accounts that have not made a single bet. So if
+            you want to play with bonus funds, get them first, and then move on to the slots.
+          </p>
+          <div class="btn-box">
+            <a class="btn__link" href="go">Visit Mr.Bit</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <p class="footer__text">© 2023 Mr Bit Casino</p>
+        </div>
+      </div>
+    </footer>
+    <button class="scroll-top-btn hidden"></button>
+    <script>
+      const d = document
+      const w = window
+
+      d.addEventListener('DOMContentLoaded', e => {
+        scrollToTop('.scroll-top-btn')
+      })
+
+      function scrollToTop(btnScroll) {
+        const $scrollBtn = d.querySelector(btnScroll)
+
+        d.addEventListener('scroll', e => {
+          let scrollTop = w.pageYOffset || d.documentElement.scrollTop
+
+          if (scrollTop > 100) {
+            $scrollBtn.classList.remove('hidden')
+          } else {
+            $scrollBtn.classList.add('hidden')
+          }
+        })
+        d.addEventListener('click', e => {
+          if (e.target.matches(btnScroll)) {
+            w.scrollTo({
+              behavior: 'smooth',
+              top: 0,
+            })
+          }
+        })
+      }
+      const anchors = document.querySelectorAll('a[href*="#"]')
+
+      for (let anchor of anchors) {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault()
+
+          const blockID = anchor.getAttribute('href').substr(1)
+
+          document.getElementById(blockID).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+          })
+        })
+      }
+    </script>
+  </body>
+</html>

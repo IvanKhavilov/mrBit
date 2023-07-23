@@ -8,7 +8,7 @@
       content="Try the mobile casino Mr Bit, where you can play slot machines directly from your phone on Android or iOS. Sign up for the mobile version of the online casino and start winning!"
     />
     <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
-    <title>Mr Bit Casino — Play Online Slots & Table Games for Cryptocurrency</title>
+    <title>Mr Bit Mobile Casino — Mobile Website and Download App</title>
     <style type="text/css">
       *,
       ::after,
@@ -48,12 +48,61 @@
       h6 {
         margin: 0;
       }
-      h1 {
-        font-size: 2.4375em;
+      img {
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+      p > img {
+        display: block;
+        margin: 0 auto;
+      }
+      .content h1,
+      .content h2,
+      .content h3 {
         text-align: center;
         border-bottom: 3px solid #00eaea;
         padding-bottom: 15px;
         margin-bottom: 25px;
+      }
+      .content__inner h1 {
+        font-size: 2.4375em;
+      }
+      .content__inner h2 {
+        font-size: 1.9375em;
+      }
+      .content__inner h3 {
+        font-size: 1.5625em;
+      }
+      .content__inner p {
+        margin-bottom: 1.7em;
+      }
+      .content__inner ul {
+        padding: 0;
+        margin-left: 25px;
+        max-width: 100%;
+        margin-top: 1.5em;
+        margin-bottom: 2em;
+      }
+      .content__inner ul > li {
+        position: relative;
+        padding-left: 2em;
+      }
+      .content__inner ul > li::before {
+        content: '';
+        position: absolute;
+        top: 0.5em;
+        left: 0;
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border: 2px solid #00eaea;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+      }
+      .main {
+        color: #00eceb;
+        font-weight: 800;
       }
       .container {
         max-width: 1190px;
@@ -74,6 +123,10 @@
       }
       .menu__item + .menu__item {
         margin-left: 30px;
+      }
+      .menu__item--disabled:hover {
+        color: #00b8bf;
+        cursor: text;
       }
       .menu__link {
         font-size: 0.8em;
@@ -101,14 +154,20 @@
       .menu__link:hover::after {
         transform: scaleX(1);
       }
+      .btn-box {
+        text-align: center;
+      }
       .btn__link {
         display: inline-block;
         background: linear-gradient(90deg, #ec0766, #743090) !important;
         padding: 1rem 2rem;
         border-radius: 10px;
-        font-size: 0.875rem;
+        font-size: 1.25rem;
         line-height: 1.5;
         transition: all 0.3s ease;
+      }
+      .btn__link--small {
+        font-size: 0.875rem;
       }
       .btn__link:hover {
         opacity: 0.8;
@@ -116,7 +175,137 @@
         box-shadow: 0 15px 35px -16px rgba(0, 0, 0, 0.9);
       }
       .content__inner {
-        padding-top: 30px;
+        padding: 30px 0;
+      }
+      .spoiler {
+        background: #0e265c;
+        margin: 30px 0;
+        border-radius: 25px;
+        max-width: 70%;
+        box-shadow: 0 0 8px 3px rgb(178 28 123 / 80%);
+        -webkit-box-shadow: 0 0 8px 3px rgb(178 28 123 / 80%);
+        padding: 20px 0;
+        position: relative;
+      }
+      .spoiler__input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+      }
+      .spoiler__label {
+        padding: 15px 30px;
+        font-weight: 700;
+        font-size: 1.2em;
+        cursor: pointer;
+        position: relative;
+      }
+      .spoiler__label::after,
+      .spoiler__label::before {
+        content: '';
+        position: absolute;
+        background-color: #fff;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 8px;
+        width: 2px;
+        transition: all 0.3s;
+      }
+      .spoiler__label::after {
+        right: 2px;
+        transform: rotate(45deg);
+      }
+      .spoiler__label::before {
+        right: 7px;
+        transform: rotate(-45deg);
+      }
+      .spoiler__content {
+        display: none;
+      }
+      .spoiler__input:checked ~ .spoiler__label::after {
+        transform: rotate(135deg);
+      }
+      .spoiler__input:checked ~ .spoiler__label::before {
+        transform: rotate(-135deg);
+      }
+      .spoiler__input:checked ~ .spoiler__content {
+        display: block;
+      }
+      .spoiler__list {
+        list-style: none;
+        counter-reset: li;
+        padding-left: 30px;
+      }
+      .spoiler__list-item {
+        color: #00eceb;
+        font-weight: 700;
+      }
+      .spoiler__list-item {
+        margin-top: 10px;
+      }
+      .spoiler__list-item::before {
+        counter-increment: li;
+        content: counters(li, '.') '. ';
+        opacity: 0.5;
+        color: #fff;
+        font-weight: 400;
+      }
+      .sub__item {
+        font-size: 0.93em;
+      }
+      .questions__item {
+        position: relative;
+        border-radius: 5px;
+        border-left: 3px solid #00eaea;
+      }
+      .questions__item + .questions__item {
+        margin-top: 15px;
+      }
+      .questions__input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+      }
+      .questions__label {
+        display: block;
+        padding: 15px 30px 15px 20px;
+        position: relative;
+        cursor: pointer;
+        background: #0e265c;
+      }
+      .questions__label::after,
+      .questions__label::before {
+        content: '';
+        position: absolute;
+        background-color: #000;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 10px;
+        width: 1.5px;
+        transition: all 0.5s;
+      }
+      .questions__label::after {
+        right: 23px;
+        transform: rotate(45deg);
+      }
+      .questions__label::before {
+        right: 30px;
+        transform: rotate(-45deg);
+      }
+      .questions__content {
+        padding: 20px;
+        background: #0e1f46;
+        display: none;
+      }
+      .questions__input:checked ~ .questions__label::after {
+        transform: rotate(135deg);
+      }
+      .questions__input:checked ~ .questions__label::before {
+        transform: rotate(-135deg);
+      }
+      .questions__input:checked ~ .questions__content {
+        display: block;
       }
       .footer {
         padding: 50px 0;
@@ -141,9 +330,69 @@
         border-radius: 4px;
         transition: all 0.3s;
       }
+      .scroll-top-btn::before,
+      .scroll-top-btn::after {
+        content: '';
+        position: absolute;
+        width: 2px;
+        height: 14px;
+        background-color: #4d3bfe;
+
+        border-radius: 1px;
+        top: 16px;
+      }
+      .scroll-top-btn::before {
+        transform: rotate(45deg);
+        top: 16px;
+        left: 24.5px;
+      }
+      .scroll-top-btn::after {
+        transform: rotate(-45deg);
+        right: 24.5px;
+      }
+      .scroll-top-btn:hover {
+        opacity: 1;
+        transform: translateY(-3px) translateZ(0);
+      }
       .hidden {
         visibility: hidden;
         opacity: 0;
+      }
+      @media (max-width: 768px) {
+        .content__inner h1 {
+          font-size: 1.625em;
+        }
+        .content__inner h2 {
+          font-size: 1.4375em;
+          line-height: 1.2;
+        }
+        .container {
+          padding: 0 20px;
+        }
+        .header__inner {
+          flex-direction: column;
+          justify-content: center;
+        }
+        .menu {
+          order: 2;
+        }
+        .menu__list {
+          flex-direction: column;
+          justify-content: center;
+        }
+        .menu__item {
+          text-align: center;
+        }
+        .menu__item + .menu__item {
+          margin-left: 0;
+          margin-top: 5px;
+        }
+        .btn__link--small {
+          margin: 10px 0;
+        }
+        .spoiler {
+          max-width: 100%;
+        }
       }
     </style>
   </head>
@@ -153,13 +402,15 @@
         <div class="header__inner">
           <nav class="menu">
             <ul class="menu__list">
-              <li class="menu__item"><a class="menu__link" href="#">BONUS</a></li>
-              <li class="menu__item"><a class="menu__link" href="#">MOBILE CASINO</a></li>
+              <li class="menu__item"><a class="menu__link" href="https://mrbit.jp/bonus">BONUS</a></li>
+              <li class="menu__item"><a class="menu__link menu__item--disabled" href="#">MOBILE CASINO</a></li>
             </ul>
           </nav>
-          <img class="logo__img" src="images/logo.png" alt="logo" width="120" height="61" />
+          <a class="logo" href="https://mrbit.jp/index">
+            <img class="logo__img" src="images/logo.png" alt="logo" width="120" height="61" />
+          </a>
           <div class="btn-box">
-            <a class="btn__link" href="go">Mr.Bit Casino</a>
+            <a class="btn__link btn__link--small" href="go">Mr.Bit Casino</a>
           </div>
         </div>
       </div>
@@ -168,6 +419,243 @@
       <div class="container">
         <div class="content__inner">
           <h1>Mr Bit Mobile Casino</h1>
+          <p>
+            <picture>
+              <source media="(min-width: 1000px)" srcset="images/mrbit-mobile-casino.webp" />
+              <source media="(min-width: 768px)" srcset="images/mrbit-mobile-casino-768.webp" />
+              <source media="(min-width: 465px)" srcset="images/mrbit-mobile-casino-320.webp" />
+              <img src="images/mrbit-mobile-casino.webp" width="100%" height="100%" alt="screanshot" />
+            </picture>
+          </p>
+          <p>
+            Mobile traffic has been exceeding traffic from desktop devices for more than 5 years.
+            <a class="main" href="https://mrbit.jp/index">Mr Bit</a>
+            is aware of this and is ready to offer its players the best mobile casino.
+          </p>
+          <p>Let us tell you about its advantages below.</p>
+          <div class="spoiler">
+            <input class="spoiler__input" type="checkbox" id="content" />
+            <label class="spoiler__label" for="content">Contents</label>
+            <div class="spoiler__content">
+              <ol class="spoiler__list">
+                <li class="spoiler__list-item">
+                  <a href="#MrBit-mobile-version">Mr.Bit Mobile Version</a>
+                  <ol class="spoiler__list">
+                    <li class="spoiler__list-item sub__item">
+                      <a href="#advantages-of-mobile-version">Advantages of Mobile Version</a>
+                    </li>
+                  </ol>
+                </li>
+                <li class="spoiler__list-item">
+                  <a href="#MrBit-mobile-payments">Mr Bit Mobile Payments</a>
+                </li>
+                <li class="spoiler__list-item">
+                  <a href="#MrBit-registration-from-mobile">MrBit Registration from mobile</a>
+                </li>
+                <li class="spoiler__list-item">
+                  <a href="#MrBit-app-download">Mr Bit App Download</a>
+                </li>
+                <li class="spoiler__list-item">
+                  <a href="#FAQ">MrBit Casino FAQ</a>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="content" id="MrBit-mobile-version">
+      <div class="container">
+        <div class="content__inner">
+          <h2>Mr.Bit Mobile Version</h2>
+          <p>
+            In 2023, there isn’t a single casino that doesn’t take care of users of mobile devices. The Mr Bit casino website has
+            a great mobile version that works perfectly on any smartphone or tablet.
+          </p>
+          <p>
+            To use the mobile casino Mr Bit you just need to go to the official website with a browser on your smartphone. Safari,
+            Google Chrome, Firefox, Opera or any other mobile browser is perfect for this.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="content" id="advantages-of-mobile-version">
+      <div class="container">
+        <div class="content__inner">
+          <h3>Advantages of Mobile Version</h3>
+          <p>
+            <picture>
+              <source media="(min-width: 1000px)" srcset="images/mr-bit-mobile-games.webp" />
+              <source media="(min-width: 768px)" srcset="images/mr-bit-mobile-games-768.webp" />
+              <source media="(min-width: 465px)" srcset="images/mr-bit-mobile-games-320.webp" />
+              <img src="images/mr-bit-mobile-games-320.webp" width="100%" height="100%" alt="screanshot" loading="lazy" />
+            </picture>
+          </p>
+          <p>
+            The main advantage of the mobile version is, of course, its availability. The ability to enter Mr.Bit casino and play
+            your favorite slots at any time and in any place is very attractive to many fans of gambling. But apart from the
+            possibility of playing on the go, the mobile version also:
+          </p>
+          <ul>
+            <li>
+              <b>Always takes into account the resolution of the device on which it is open.</b> The mobile site at any time is
+              ready to adjust to the required size, even if you change orientation and switch from vertical to horizontal mode.
+            </li>
+            <li>
+              <b>100% repeats the functionality of the official site MrBit, because it is.</b> You don’t have to guess – whether
+              the deposit or withdrawal function is available on the mobile version. Or whether you will be able to make bets in
+              the Mr Bit bookmaker’s office. It provides the same set of features that you can do in an online casino from your
+              computer.
+            </li>
+            <li>
+              <b>Saves memory space on your smartphone.</b>
+              You have no need to download apps and clog your phone memory. Opened in a mobile browser version gives a minimum
+              load on the RAM while it is open and immediately stops when you leave the Mr Bit casino site.
+            </li>
+          </ul>
+          <p>
+            The disadvantage would be the speed of loading information from the site, but it depends entirely on the quality of
+            connection and the speed of your Internet connection.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="content" id="MrBit-mobile-payments">
+      <div class="container">
+        <div class="content__inner">
+          <h2>Mr Bit Mobile Payments</h2>
+          <p>
+            Many people prefer the mobile casino to the regular version just because of the payments. The convenience is that the
+            user does not need to be distracted by other devices. You go to the casino from your phone, use your phone to register
+            or log in to your existing account, and fund your account from your phone, too. This is at least convenient, don’t you
+            think?
+          </p>
+          <p>Deposit in Mr Bit mobile casino can be made in the same ways as in the desktop version:</p>
+          <ul>
+            <li>Bank cards Visa, MasterCard,</li>
+            <li>WebMoney,</li>
+            <li>ecoPayz,</li>
+            <li>Skrill,</li>
+            <li>MuchBetter,</li>
+            <li>Neteller,</li>
+            <li>Cryptocurrencies,</li>
+            <li>Paysafecard,</li>
+            <li>And others.</li>
+          </ul>
+          <p>The minimum deposit amount from a mobile device is also €10.</p>
+        </div>
+      </div>
+    </section>
+    <section class="content" id="MrBit-registration-from-mobile">
+      <div class="container">
+        <div class="content__inner">
+          <h2>MrBit Registration from mobile</h2>
+          <p>To register at the casino MrBit from a mobile device, you need:</p>
+          <ol class="number__list">
+            <li class="number__list-item">Go to the official website of the Mister Bit casino.</li>
+            <li class="number__list-item">Click on the Menu icon (aka burger) in the upper left corner.</li>
+            <li class="number__list-item">Click on the button “Register”.</li>
+            <li class="number__list-item">In the window that will open, click on “Start with email”.</li>
+            <li class="number__list-item">Follow the instructions.</li>
+            <li class="number__list-item">Confirm your email address.</li>
+          </ol>
+          <p>
+            During the registration itself you will need to enter some data. Yes, we understand that other casinos may not take as
+            long to register as Mr Bit, but we want to protect ourselves and our players from possible inconvenience. That’s why
+            we collect as much information as possible.
+          </p>
+          <p>
+            <picture>
+              <source media="(min-width: 1000px)" srcset="images/mr-bit-mobile-register.webp" />
+              <source media="(min-width: 768px)" srcset="images/mr-bit-mobile-register-768.webp" />
+              <source media="(min-width: 465px)" srcset="images/mr-bit-mobile-register-320.webp" />
+              <img src="images/mr-bit-mobile-register.webp" width="100%" height="100%" alt="screanshot" />
+            </picture>
+          </p>
+          <p>
+            During registration you will be offered a welcome bonus. You can decide for yourself whether to activate it or not.
+          </p>
+          <p>After registration you will get full access to all the entertainment in our online casino:</p>
+          <ul>
+            <li>The best slot machines from the world’s developers and providers.</li>
+            <li>Deposit bonuses.</li>
+            <li>Tournaments and major events with generous prizes.</li>
+            <li>Sports betting (bookmaker’s office is only available in some countries).</li>
+            <li>Prompt technical support for any questions.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="content" id="MrBit-app-download">
+      <div class="container">
+        <div class="content__inner">
+          <h2>Mr Bit App Download</h2>
+          <p>
+            The developers of the Mr Bit website couldn’t help but notice the trend for mobile applications that has taken over
+            the entire Internet. We also thought of developing our own software that can be downloaded on smartphones and used at
+            any time.
+          </p>
+          <p>
+            But after thinking it over, we decided to focus on making a really high-quality adaptive version of the casino, and we
+            think we did it.
+          </p>
+          <p>
+            If you still want to download Mr Bit app on your phone, you can add it there by clicking the appropriate button on our
+            website.
+          </p>
+          <p>
+            <picture>
+              <source media="(min-width: 1000px)" srcset="images/mr-bit-app-download.webp" />
+              <source media="(min-width: 768px)" srcset="images/mr-bit-app-download-768.webp" />
+              <source media="(min-width: 465px)" srcset="images/mr-bit-app-download-320.webp" />
+              <img src="images/mr-bit-app-download-320.webp" width="100%" height="100%" alt="screanshot" loading="lazy" />
+            </picture>
+          </p>
+          <p>
+            This icon is a working link to the mobile version of the casino site Mr Bit and it works perfectly on Android and iOS
+            devices of all generations.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="content" id="FAQ">
+      <div class="container">
+        <div class="content__inner">
+          <h2>FAQ</h2>
+          <div class="questions__item">
+            <input class="questions__input" type="checkbox" id="question-1" />
+            <label class="questions__label" for="question-1">Is Mr Bit Mobile Casino safe?</label>
+            <div class="questions__content">
+              Yes. The official Mr Bit Casino website is licensed by Curacao eGaming and protects all of our members’ data. The
+              mobile version of Mr. Bit casino fully repeats the functionality of the site and therefore has a similar level of
+              protection.
+            </div>
+          </div>
+          <div class="questions__item">
+            <input class="questions__input" type="checkbox" id="question-2" />
+            <label class="questions__label" for="question-2">Can I download Mr Bit APK file?</label>
+            <div class="questions__content">
+              Unfortunately, no. Casino Mr.Bit has no app, that you can download as APK file to your Android smartphone. But the
+              casino has an excellent mobile version of the site, which is convenient and easy to use.
+            </div>
+          </div>
+          <div class="questions__item">
+            <input class="questions__input" type="checkbox" id="question-3" />
+            <label class="questions__label" for="question-3"
+              >Can I deposit or withdraw money in the mobile version of Mr.Bit?</label
+            >
+            <div class="questions__content">
+              Yes. In the mobile version of Mr.Bit you can do 100% of what you would do from a PC or laptop: register, make
+              financial transactions, play slots, participate in tournaments.
+            </div>
+          </div>
+          <div class="questions__item">
+            <input class="questions__input" type="checkbox" id="question-4" />
+            <label class="questions__label" for="question-4">Can I play Live Casino games from Mr.Bit mobile casino?</label>
+            <div class="questions__content">
+              Yes. Absolutely all the fun in Mr.Bit mobile casino is adapted for any device, including Live Casino games.
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -206,6 +694,20 @@
               top: 0,
             })
           }
+        })
+      }
+      const anchors = document.querySelectorAll('a[href*="#"]')
+
+      for (let anchor of anchors) {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault()
+
+          const blockID = anchor.getAttribute('href').substr(1)
+
+          document.getElementById(blockID).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+          })
         })
       }
     </script>
