@@ -27,6 +27,14 @@
         line-height: 1.5;
         overflow-wrap: break-word;
       }
+      ol:not([class]):before,
+      p:before,
+      ul:not([class]):before {
+        content: '';
+        display: block;
+        width: 10em;
+        overflow: hidden;
+      }
       a {
         color: inherit;
         text-decoration: none;
